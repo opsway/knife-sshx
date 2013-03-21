@@ -10,8 +10,8 @@ module MyKnifePlugins
         	Shef::Extensions.extend_context_object(self)
 
         	nodename = name_args[0]
-				if nodename == nil 
-					ui.fatal("Usage: knife sshx nodename") 
+				if !nodename
+					ui.fatal("Provide nodename to connect") 
 				end
 
 				nodeFound = false
