@@ -1,13 +1,17 @@
-knife-sshx
-==========
-
 Opscode Chef knife sshx plugin 
+==========
 
 Login in to node with ssh using the following information:
 
 * login -> node["current_user"]
 * ssh_port -> node[:ssh][:port]
 
-Usage:
+Installation
+---------------
+
+Copy knifesshx.rb to ${YOUR_CHEF_REPO}/.chef/plugings/chef
+
+Usage
+---------------
 
 knife sshx node_name
