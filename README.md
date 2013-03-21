@@ -9,7 +9,7 @@ Login in to node with ssh using the following information:
 Installation
 ---------------
 
-Copy knifesshx.rb to ${YOUR_CHEF_REPO}/.chef/plugings/chef
+Copy knifesshx.rb to ${YOUR_CHEF_REPO}/.chef/plugins/knife
 
 Usage
 ---------------
