@@ -8,8 +8,8 @@ module MyKnifePlugins
 
         def run
         	nodename = name_args[0]
-				if nodename == nil 
-					ui.fatal("Usage: knife sshx nodename") 
+				if !nodename
+					ui.fatal("Provide nodename to connect") 
 				end
 
 				nodeFound = false
@@ -23,8 +23,10 @@ module MyKnifePlugins
 					if !node['current_user'] || node['current_user'].strip.length == 0
 							ui.error("Unknown current user for node #{nodename}")
 					else
-						ui.msg("Connecting to #{ipaddress} as user #{node['current_user']} on port #{node[:ssh][:port]}")
-						exec("ssh -p#{node[:ssh][:port]} #{node['current_user']}@#{ipaddress}")
+						ssh_port = 22
+                                                ssh_port = node[:ssh][:port] if node[:ssh]
+                                                ui.msg("Connecting to #{ipaddress} as user #{node['current_user']} on port #{ssh_port}")
+                                                exec("ssh -p#{ssh_port} #{node['current_user']}@#{ipaddress}")
 					end
 					nodeFound = true
 					break
