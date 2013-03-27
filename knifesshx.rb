@@ -3,19 +3,18 @@ module MyKnifePlugins
 		banner "Usage: knife sshx nodename" 
 
 		deps do
-	      require 'chef/shef/ext'
-	    end
+  			require 'chef/search/query'
+    	end
 
         def run
-        	Shef::Extensions.extend_context_object(self)
-
         	nodename = name_args[0]
 				if nodename == nil 
 					ui.fatal("Usage: knife sshx nodename") 
 				end
 
 				nodeFound = false
-				search(:node, "name:#{nodename}") do |node|
+				node_query = Chef::Search::Query.new
+				node_query.search('node', "name:#{nodename}") do |node|
 					ipaddress = node['ipaddress']
 					if node.hasKey("cloud")
 						ipaddress = node['cloud']['public_ipv4']
