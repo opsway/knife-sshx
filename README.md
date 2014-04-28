@@ -25,9 +25,11 @@ This command will setup bash autocompletion and update servers list for this rep
 This will allow to connect to servers from any repositiry without changing current directory.
 <br> 4) Restart your shell.
 
-BENIFITS
+BENEFITS
+
 --------
 1) You can choose to which instance to connect if they use the same aws name:
+
 <br>Like that:
 
 <br>knife sshx costumebox-live-node
