@@ -1,0 +1,25 @@
+{
+  "id": "all_in_one",
+  "data": [
+    {
+      "account": "aws_acc1",
+      "access_key": "AKIA1111111111111111",
+      "secret_key": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "default": true,
+      "nodes": [
+
+      ]
+    },
+    {
+      "account": "aws_acc2",
+      "access_key": "AKIA2222222222222222",
+      "secret_key": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "default": false,
+      "nodes": [
+        "node1",
+        "node2"
+      ]
+    }
+  ]
+}
+
