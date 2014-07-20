@@ -50,10 +50,10 @@ BENEFITS
 
 USAGE
 -----
-knife sshx [options] [nodename]
+    $ knife sshx [options] [nodename]
 
-<br>Available options:
+### Available options:
 
-<br> -m      completely disables aws lookups, needed in case of plugin's malfunction.
-<br> -u      update node list for current chef repository, update plugin, node list and regions's cache if running from    <br>             repository root, with this options nodename is optional.
-<br> -b      batche mode,  run command on all nodes with given name. 	
+* **-m**     - completely disables aws lookups, needed in case of plugin's malfunction.
+* **-u**     - update node list for current chef repository, update plugin, node list and regions's cache if running from                 repository root, with this options nodename is optional.
+* **-b "command"**     - batche mode,  run command on all nodes with given name. 	
